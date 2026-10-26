@@ -1,0 +1,372 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Winter Arc: 90 Day Lock In</title>
+  <meta name="description" content="A 90-day discipline tracker for Android: daily habits, workouts, streaks and ranks. One day per calendar day. No account, no ads.">
+  <meta name="theme-color" content="#04060b">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://winterarc-app.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Winter Arc: 90 Day Lock In">
+  <meta property="og:description" content="90 days. One day at a time. Daily habits, workouts, streaks and ranks.">
+  <meta property="og:url" content="https://winterarc-app.github.io/">
+  <meta property="og:image" content="https://winterarc-app.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-192.png" alt="">Winter Arc</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#modes">Modes</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow"></div>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Winter Arc // Lock in season</span>
+        <h1>90 days.<br>One day at a time.<br><span class="accent">Lock in.</span></h1>
+        <p class="lead">Pick your daily non-negotiables, show up every day and seal each one into your 90-day matrix. Habits, training, sleep and goals in one app.</p>
+        <div class="cta-row">
+          <span class="btn btn-soon" id="get" role="note" aria-label="Coming soon on Google Play">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9.2-8.5L4 3.5z" fill="#00f2fe"/><path d="M13.2 12 16 9.4 6 3.2l7.2 8.8z" fill="#4facfe"/><path d="M13.2 12 6 20.8l10-6.2-2.8-2.6z" fill="#4facfe"/><path d="m16 9.4 3.6 2.1c.6.3.6 1.1 0 1.4L16 14.6 13.2 12 16 9.4z" fill="#e6edf7"/></svg>
+            <span><small>COMING SOON</small>on Google Play</span>
+          </span>
+          <a class="btn btn-ghost" href="#features">See what's inside</a>
+        </div>
+        <ul class="trust">
+          <li>No account</li>
+          <li>No ads</li>
+          <li>Your data stays on your phone</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="chip chip-streak">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.6 4.2 6 7.6 6 11a6 6 0 0 1-12 0c0-3.4 2.4-6.8 6-11z" fill="url(#drop)"/><defs><linearGradient id="drop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/></linearGradient></defs></svg>
+          <span><b>39</b> <span class="dim">day streak</span></span>
+        </div>
+        <div class="chip chip-rank">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="#00f2fe"/></svg>
+          Tier 4 · Locked In
+        </div>
+        <div class="phone">
+          <img src="assets/screen-home.jpg" width="540" height="1150" alt="Winter Arc home screen: Day 41, 4 of 6 habits done, the Record Day button and the 90-day matrix">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATRIX -->
+  <section class="matrix-section" id="how">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">The 90-day lock-in matrix</span>
+        <h2>One day per calendar day. No skipping ahead.</h2>
+        <p class="muted">Your arc runs on the real calendar. Day 41 is Day 41: you can't race through it in an afternoon, and a day you let slip is gone. When the work is done, hold the lock to seal the day and watch the matrix fill up.</p>
+      </div>
+      <div class="card matrix-card reveal" aria-label="A 90-day matrix with 40 days locked in and one shielded day">
+        <div class="matrix-top">
+          <strong>90-Day Lock-In Matrix</strong>
+          <span id="matrix-count">0 / 90</span>
+        </div>
+        <div class="matrix" id="matrix"></div>
+        <div class="legend">
+          <span><i style="background:linear-gradient(135deg,#00f2fe,#4facfe)"></i>Locked in</span>
+          <span><i style="border:1.5px solid #8fb4d9"></i>Shield</span>
+          <span><i style="border:1.5px solid #00f2fe"></i>Today</span>
+          <span><i style="background:#121a2a;border:1px solid #1a2336"></i>Ahead</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker">How it works</span>
+        <h2>Three moves. Every day.</h2>
+      </div>
+      <div class="steps">
+        <div class="card step reveal">
+          <div class="step-num">1</div>
+          <h3>Pick your non-negotiables</h3>
+          <p>Training, cold showers, reading, deep work, no morning doomscrolling: up to 15 daily habits with your own icons, colours and reminders.</p>
+        </div>
+        <div class="card step reveal">
+          <div class="step-num">2</div>
+          <h3>Show up and tick them off</h3>
+          <p>Every habit earns XP. A daily quest adds a bonus, and the home-screen widget lets you tick habits without opening the app.</p>
+        </div>
+        <div class="card step reveal">
+          <div class="step-num">3</div>
+          <h3>Hold to lock in</h3>
+          <p>Seal the day into your matrix. Your streak grows, your rank climbs, and badges land at 10, 30, 60 and 90 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker">Inside the app</span>
+        <h2>Everything your arc needs. Nothing it doesn't.</h2>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-media">
+          <div class="phone"><img src="assets/screen-habits.jpg" width="540" height="1150" loading="lazy" alt="The habit list: six colour-coded daily habits, four of them done"></div>
+        </div>
+        <div>
+          <span class="kicker">Habits</span>
+          <h2>Build habits that stick</h2>
+          <p class="muted">Your daily non-negotiables, front and centre. Tick them off, earn XP and see at a glance what's left.</p>
+          <ul>
+            <li>Up to 15 habits with icons, colours and daily reminders</li>
+            <li>A daily quest for bonus XP, with one swap a day</li>
+            <li>Evening reflection, energy rating and a plan for tomorrow</li>
+            <li>Home-screen widget and a focus timer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature flip reveal">
+        <div class="feature-media">
+          <div class="phone"><img src="assets/screen-rank.jpg" width="540" height="1150" loading="lazy" alt="A rank crest: Tier 4 of 7, Locked In"></div>
+        </div>
+        <div>
+          <span class="kicker">Ranks</span>
+          <h2>Rank up in 7 tiers</h2>
+          <p class="muted">Every habit, lock-in, workout and goal earns XP. Climb from NPC to Apex, earn milestone badges and unlock new themes along the way. The top ranks stay classified until you reach them.</p>
+          <ul>
+            <li>7 ranks, each with its own animated crest</li>
+            <li>Milestone badges at 10, 30, 60 and 90 days</li>
+            <li>Themes that unlock at 30 and 90 days</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ranks reveal" aria-label="The seven ranks">
+        <div class="rank" style="--c:#94a3b8"><b>1</b>NPC // DRIFTER</div>
+        <div class="rank" style="--c:#38bdf8"><b>2</b>DOPAMINE DETOXER</div>
+        <div class="rank" style="--c:#34d399"><b>3</b>MONK MODE</div>
+        <div class="rank" style="--c:#00f2fe"><b>4</b>LOCKED IN</div>
+        <div class="rank" style="--c:#818cf8"><b>5</b>STOIC // SIGMA</div>
+        <div class="rank hidden-rank" style="--c:#5d6b80"><b>6</b>???</div>
+        <div class="rank hidden-rank" style="--c:#5d6b80"><b>7</b>???</div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-media">
+          <div class="phone"><img src="assets/screen-workouts.jpg" width="540" height="1150" loading="lazy" alt="Workouts: a body map of the muscles trained in the last 7 days"></div>
+        </div>
+        <div>
+          <span class="kicker">Training</span>
+          <h2>Train every muscle</h2>
+          <p class="muted">A full training log that knows what you did last time and nudges you to beat it.</p>
+          <ul>
+            <li>156 exercises, gym and calisthenics</li>
+            <li>Push, pull, legs and other ready splits, or build your own</li>
+            <li>Live sessions with a rest timer and progression hints</li>
+            <li>Personal records, estimated 1RM and volume trends</li>
+            <li>A body map of the muscles you trained this week</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature flip reveal">
+        <div class="feature-media">
+          <div class="phone"><img src="assets/screen-regime.jpg" width="540" height="1150" loading="lazy" alt="Bio-Engine: water, sleep and fuel rings and a body weight chart"></div>
+        </div>
+        <div>
+          <span class="kicker">Bio-Engine</span>
+          <h2>Water, sleep, fuel and weight</h2>
+          <p class="muted">The basics that make or break an arc, as three daily rings and one clear weight trend.</p>
+          <ul>
+            <li>Water, sleep and fuel (calories, protein, carbs) rings</li>
+            <li>Body weight chart with your start, current and target</li>
+            <li>Progress photos with a before/after slider</li>
+            <li>Guided breathwork and your own recovery protocols</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-media">
+          <div class="phone"><img src="assets/screen-goals.jpg" width="540" height="1150" loading="lazy" alt="Goals: a North Star weight goal on pace and three more goals"></div>
+        </div>
+        <div>
+          <span class="kicker">Goals</span>
+          <h2>Goals with a deadline</h2>
+          <p class="muted">Ninety days is enough to change something real. Set it, track it, and see whether you're ahead of pace or behind.</p>
+          <ul>
+            <li>Records, totals or step-by-step roadmaps</li>
+            <li>One North Star goal and a pace chart to Day 90</li>
+            <li>Finished goals become trophies</li>
+            <li>Weekly recaps and a 9:16 card to share your progress</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODES -->
+  <section id="modes">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker">Choose your mode</span>
+        <h2>How much margin do you want?</h2>
+      </div>
+      <div class="modes">
+        <div class="card mode mode-standard reveal">
+          <span class="tag">STANDARD</span>
+          <h3>Room for real life</h3>
+          <p>Three streak shields cover the days life gets in the way. Milestones refill them, so one bad day never ends your arc.</p>
+          <div class="facts"><span>3 shields</span><span>3 edits of sealed days</span><span>Streak protected</span></div>
+        </div>
+        <div class="card mode mode-hardcore reveal">
+          <span class="tag">HARDCORE</span>
+          <h3>Zero margin</h3>
+          <p>No shields, no second chances. One day without a lock-in and the arc starts again from Day 1. Daily quests get harder too.</p>
+          <div class="facts"><span>0 shields</span><span>Miss a day: back to Day 1</span><span>Harder quests</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker">Privacy</span>
+        <h2>Your arc stays on your phone</h2>
+        <p>No sign-up and no cloud account. You own your data.</p>
+      </div>
+      <div class="privacy-grid">
+        <div class="card privacy-item reveal">
+          <div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3" fill="none" stroke="#00f2fe" stroke-width="2"/><path d="M10 18h4" stroke="#00f2fe" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Stored on your device</h3>
+          <p>Habits, weight, workouts, photos and notes are saved only on your phone. Nobody else can see them.</p>
+        </div>
+        <div class="card privacy-item reveal">
+          <div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Backups you control</h3>
+          <p>Save a backup file wherever you like and restore it on a new phone in a few taps.</p>
+        </div>
+        <div class="card privacy-item reveal">
+          <div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>No ads, no tracking for ads</h3>
+          <p>Only anonymous crash reports and usage stats, never what you type. Turn them off in Profile any time.</p>
+        </div>
+      </div>
+      <p class="muted reveal" style="text-align:center;margin-top:28px">Read the full <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="card final reveal">
+        <img src="assets/icon-192.png" width="88" height="88" alt="Winter Arc app icon">
+        <h2>Start your Winter Arc</h2>
+        <p>Winter Arc is coming to Google Play for Android. Questions or feedback? Write to <a href="mailto:winterarc.help@gmail.com">winterarc.help@gmail.com</a>.</p>
+        <div class="cta-row">
+          <span class="btn btn-soon" role="note" aria-label="Coming soon on Google Play">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9.2-8.5L4 3.5z" fill="#00f2fe"/><path d="M13.2 12 16 9.4 6 3.2l7.2 8.8z" fill="#4facfe"/><path d="M13.2 12 6 20.8l10-6.2-2.8-2.6z" fill="#4facfe"/><path d="m16 9.4 3.6 2.1c.6.3.6 1.1 0 1.4L16 14.6 13.2 12 16 9.4z" fill="#e6edf7"/></svg>
+            <span><small>COMING SOON</small>on Google Play</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Winter Arc</span>
+    <nav aria-label="Footer">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="privacy-policy.html#health">Health Disclaimer</a>
+      <a href="mailto:winterarc.help@gmail.com">Support</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // The matrix fills itself in when it scrolls into view: 40 days locked,
+  // Day 17 saved by a shield, Day 41 is today.
+  (function () {
+    var LOCKED = 40, SHIELD = 17, TODAY = 41;
+    var check = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="#03121a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var shield = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 9.7 4-1.4 7-5.3 7-9.7V6l-7-3z" fill="#8fb4d9"/></svg>';
+    var grid = document.getElementById('matrix');
+    var count = document.getElementById('matrix-count');
+    var cells = [];
+    for (var i = 1; i <= 90; i++) {
+      var c = document.createElement('div');
+      c.className = 'cell';
+      c.innerHTML = i === SHIELD ? shield : check;
+      grid.appendChild(c);
+      cells.push(c);
+    }
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function fill() {
+      var done = 0;
+      cells.forEach(function (c, k) {
+        var day = k + 1;
+        if (day > TODAY) return;
+        setTimeout(function () {
+          if (day === SHIELD) c.classList.add('shield');
+          else if (day === TODAY) c.classList.add('today');
+          else c.classList.add('on');
+          if (day !== TODAY) done++;
+          count.textContent = done + ' / 90';
+        }, reduce ? 0 : day * 28);
+      });
+    }
+    if (!('IntersectionObserver' in window)) { fill(); }
+    else {
+      var io = new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting) { fill(); io.disconnect(); }
+      }, { threshold: 0.4 });
+      io.observe(grid);
+    }
+
+    // Sections fade up as they come into view.
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || reduce) {
+      items.forEach(function (el) { el.classList.add('shown'); });
+      return;
+    }
+    var ro = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('shown'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { ro.observe(el); });
+  })();
+</script>
+</body>
+</html>
