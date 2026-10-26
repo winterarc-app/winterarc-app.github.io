@@ -1,4 +1,4 @@
-/* Winter Arc website: the app's look (deep night, cyan glow).
+﻿/* Winter Arc website: the app's look (deep night, cyan glow).
    No web fonts, no trackers: the system font, nothing loaded from elsewhere. */
 
 :root {
@@ -232,7 +232,7 @@ h1 {
 .phone {
   position: relative;
   width: min(300px, 78vw);
-  aspect-ratio: 540 / 1150;
+  aspect-ratio: 540 / 1189;
   border-radius: 42px;
   padding: 9px;
   background: linear-gradient(160deg, #222c41, #0d1220 60%);
